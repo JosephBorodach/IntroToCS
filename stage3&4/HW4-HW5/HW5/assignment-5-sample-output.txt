@@ -1,0 +1,109 @@
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv
+Invalid input: must specify at least a format (csv or pp), as well as the highest column and row
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp
+Invalid input: must specify at least a format (csv or pp), as well as the highest column and row
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp A
+Invalid input: must specify at least a format (csv or pp), as well as the highest column and row
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp C 5
+        A       B       C
+1
+2
+3
+4
+5
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv C 5
+A,B,C
+,,
+,,
+,,
+,,
+,,
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp F 10 D7 20 A3 15 E6 3.75 A10 598 B9 200 F10 1000 C4 50
+        A       B       C       D       E       F
+1
+2
+3       15
+4                       50
+5
+6                                       3.75
+7                               20
+8
+9               200
+10      598                                     1000
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv F 10 D7 20 A3 15 E6 3.75 A10 598 B9 200 F10 1000 C4 50
+A,B,C,D,E,F
+,,,,,
+,,,,,
+15,,,,,
+,,50,,,
+,,,,,
+,,,,3.75,
+,,,20,,
+,,,,,
+,200,,,,
+598,,,,,1000
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv F 10 D7 20 A3 15 E6 3.75 A10 598 B9 200 F10 1000 C4
+Invalid input: must specify the format, spreadsheet range, and then cell-value pairs. You entered an even number of inputs
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp F 10 D7 20 A3 15
+        A       B       C       D       E       F
+1
+2
+3       15
+4
+5
+6
+7                               20
+8
+9
+10
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv F 10 D7 20 A3 15
+A,B,C,D,E,F
+,,,,,
+,,,,,
+15,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,20,,
+,,,,,
+,,,,,
+,,,,,
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp F 10 D7 20 A3 15 C5 50 F10 61
+        A       B       C       D       E       F
+1
+2
+3       15
+4
+5                       50
+6
+7                               20
+8
+9
+10                                              61
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv F 10 D7 20 A3 15 C5 50 F10 61
+A,B,C,D,E,F
+,,,,,
+,,,,,
+15,,,,,
+,,,,,
+,,50,,,
+,,,,,
+,,,20,,
+,,,,,
+,,,,,
+,,,,,61
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 pp C 5 A1 3 B1 2 C1 3 A2 33 C3 45 B2 96
+        A       B       C
+1       3       2       3
+2       33      96
+3                       45
+4
+5
+diament@BOXX-1P811BSSGV:java$ java SpreadSheetPrinterV2 csv C 5 A1 3 B1 2 C1 3 A2 33 C3 45 B2 96
+A,B,C
+3,2,3
+33,96,
+,,45
+,,
+,,
+diament@BOXX-1P811BSSGV:java$

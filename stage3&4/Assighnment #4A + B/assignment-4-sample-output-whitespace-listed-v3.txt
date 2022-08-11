@@ -1,0 +1,70 @@
+diament@:home$ javac SpreadSheetPrinter.java\n
+diament@:home$ java SpreadSheetPrinter 5\n
+Invalid input: must specify at least highest column and row.\n
+diament@:home$ java SpreadSheetPrinter\n
+Invalid input: must specify at least highest column and row.\n
+diament@:home$ java SpreadSheetPrinter 5 6 7\n
+Invalid input: must specify the spreadsheet range, followed by cell-value pairs. You entered an odd number of inputs.\n
+diament@:home$ java SpreadSheetPrinter 9 D\n
+Please specify a valid spreadsheet range, with highest column between A and Z and highest row as an integer\n
+diament@:home$ java SpreadSheetPrinter F\n
+Invalid input: must specify at least highest column and row.\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 E6 3.75 A10 598 B9 200 F10 1000 C4 50 D5\n
+Invalid input: must specify the spreadsheet range, followed by cell-value pairs. You entered an odd number of inputs.\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 E6 3.75 A11 598 B9 200 F10 1000 C4 50\n
+Invalid cell label: A11\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 E6 Hello A11 598 B9 200 F10 1000 C4 50\n
+Invalid cell label: A11\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 E6 Hello A10 598 B9 200 F10 1000 C4 50\n
+Invalid cell value: Hello\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 E6 3.75 A10 598 B9 200 F10 1000 C4 50\n
+\s\s\tA\tB\tC\tD\tE\tF\n
+1\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+2\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+3\t15\t\s\t\s\t\s\t\s\t\s\t\n
+4\t\s\t\s\t50\t\s\t\s\t\s\t\n
+5\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+6\t\s\t\s\t\s\t\s\t3.75\t\s\t\n
+7\t\s\t\s\t\s\t20\t\s\t\s\t\n
+8\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+9\t\s\t200\t\s\t\s\t\s\t\s\t\n
+10\t598\t\s\t\s\t\s\t\s\t1000\t\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15\n
+\s\s\tA\tB\tC\tD\tE\tF\n
+1\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+2\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+3\t15\t\s\t\s\t\s\t\s\t\s\t\n
+4\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+5\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+6\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+7\t\s\t\s\t\s\t20\t\s\t\s\t\n
+8\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+9\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+10\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+diament@:home$ java SpreadSheetPrinter F 10 D7 20 A3 15 C5 50 F10 61\n
+\s\s\tA\tB\tC\tD\tE\tF\n
+1\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+2\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+3\t15\t\s\t\s\t\s\t\s\t\s\t\n
+4\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+5\t\s\t\s\t50\t\s\t\s\t\s\t\n
+6\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+7\t\s\t\s\t\s\t20\t\s\t\s\t\n
+8\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+9\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+10\t\s\t\s\t\s\t\s\t\s\t61\t\n
+diament@:home$ java SpreadSheetPrinter C 5 A1 3 B1 2 C1 3 A2 33 C3 45 B2 96\n
+\s\tA\tB\tC\n
+1\t3\t2\t3\t\n
+2\t33\t96\t\s\t\n
+3\t\s\t\s\t45\t\n
+4\t\s\t\s\t\s\t\n
+5\t\s\t\s\t\s\t\n
+diament@:home$ java SpreadSheetPrinter K 5\n
+\s\tA\tB\tC\tD\tE\tF\tG\tH\tI\tJ\tK\n
+1\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+2\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+3\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+4\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+5\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\s\t\n
+diament@:home$
