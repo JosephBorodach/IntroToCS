@@ -63,12 +63,13 @@ public class TestSpreadSheetPrinter {
 		String cellLabel = columnStrung + rowStrung;
 		for (int i = 0; i < input.length; i += 2) {
 			String returnValue = " ";
-			if (cellLabel = input [i]) {
+			if (cellLabel == input[i]) {
 				returnValue = input [i];
 				return returnValue;
 			} else {
 				return returnValue;
 			}
-		} returnValue
+		}
+		return "";
 	}
 }

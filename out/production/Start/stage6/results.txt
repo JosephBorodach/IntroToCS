@@ -1,0 +1,152 @@
+YOUR SCORE: 167 out of 202
+
+TEST NAME: Test constructor and get copy of data
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: getCellValue Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getSpreadSheetAsCSV Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: setValue Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getCopyOfData Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: expandColumnRange Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getCopyOfColumnThroughRow Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getValue(char,int) Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getValue(String) Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: evaluateFormula Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: Test getSpreadSheetAsCSV when it has no data and showForumlas == false
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Test getSpreadSheetAsCSV when it has no data and showForumlas == true
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values only and showForumlas == true
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values only and showForumlas == false
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values AND formulas, with showForumlas == true
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values AND formulas, with showForumlas == false
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: Set a cell to a double value. Cell is within current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
+For input string: "C3"
+java.lang.NumberFormatException: For input string: "C3"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:543)
+	at ArrayBasedSpreadSheet.getValue(ArrayBasedSpreadSheet.java:187)
+	at Assignment6Tests.testSetAndGetValue(Assignment6Tests.java:454)
+	at Assignment6Tests.runTests(Assignment6Tests.java:135)
+	at Assignment6Tests.main(Assignment6Tests.java:15)
+
+	Possible Reasons for failure: ACCOUNTED FOR
+		- getValue (string) was not set up to receive a cell, it was set up to receive a value - it would not (a) change null to 0 or (b) send the call to evaluate formula
+
+TEST NAME: Set a cell to a double value. Cell's Column & Row are beyond current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 5
+For input string: "G5"
+java.lang.NumberFormatException: For input string: "G5"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:543)
+	at ArrayBasedSpreadSheet.getValue(ArrayBasedSpreadSheet.java:187)
+	at Assignment6Tests.testSetAndGetValueBeyondBounds(Assignment6Tests.java:436)
+	at Assignment6Tests.runTests(Assignment6Tests.java:145)
+	at Assignment6Tests.main(Assignment6Tests.java:15)
+
+	Possible Reasons for failure: ACCOUNTED FOR
+		- setValue did not expand the ranges. 
+		- getValue (string) was not set up to receive a cell, it was set up to receive a value - it would not (a) change null to 0 or (b) send the call to evaluate formula
+
+TEST NAME: Set a cell to a formula value. Cell is within current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
+For input string: "C3"
+java.lang.NumberFormatException: For input string: "C3"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:543)
+	at ArrayBasedSpreadSheet.getValue(ArrayBasedSpreadSheet.java:187)
+	at Assignment6Tests.testSetAndGetFormulaValue(Assignment6Tests.java:418)
+	at Assignment6Tests.runTests(Assignment6Tests.java:155)
+	at Assignment6Tests.main(Assignment6Tests.java:15)
+
+	Possible Reasons for failure: ACCOUNTED FOR
+		- getValue (string) was not set up to receive a cell, it was set up to receive a value - it would not (a) change null to 0 or (b) send the call to evaluate formula
+
+TEST NAME: Set a cell to a formula value. Cell is BEYOND current bounds of sheet, and formula references a cell beyond the bounds. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
+Index 25 out of bounds for length 6
+java.lang.ArrayIndexOutOfBoundsException: Index 25 out of bounds for length 6
+	at ArrayBasedSpreadSheet.getValue(ArrayBasedSpreadSheet.java:169)
+	at ArrayBasedSpreadSheet.evaluateFormula(ArrayBasedSpreadSheet.java:219)
+	at ArrayBasedSpreadSheet.getValue(ArrayBasedSpreadSheet.java:179)
+	at Assignment6Tests.testSetAndGetFormulaValueBeyondBounds(Assignment6Tests.java:392)
+	at Assignment6Tests.runTests(Assignment6Tests.java:165)
+	at Assignment6Tests.main(Assignment6Tests.java:15)
+
+	Possible Reasons for failure: ACCOUNTED FOR
+		- setValue did not expand the ranges.
+		- setValue did not expand the FORMULAS cells!
+		- getValue (string) was not set up to receive a cell, it was set up to receive a value - it would not (a) change null to 0 or (b) send the call to evaluate formula
+
+
++++++TEST FAILED+++++
+
+TEST NAME: CSV after calling set value beyond data bounds.
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Expand Column Range.
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Column Through Row, Where Row < Actual Length.
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Column Through Row, Where Row > Actual Length.
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Data
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+

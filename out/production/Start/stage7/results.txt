@@ -1,0 +1,145 @@
+YOUR SCORE: 262 out of 282
+
+TEST NAME: Test constructor and get copy of data
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: getCellValue Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getSpreadSheetAsCSV Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: setValue Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getCopyOfData Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: expandColumnRange Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getCopyOfColumnThroughRow Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getValue(char,int) Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: getValue(String) Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: evaluateFormula Signature
+TEST POINT VALUE: 3
++++++TEST PASSED+++++
+
+TEST NAME: Test getSpreadSheetAsCSV when it has no data and showForumlas == false
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Test getSpreadSheetAsCSV when it has no data and showForumlas == true
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values only and showForumlas == true
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values only and showForumlas == false
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values AND formulas, with showForumlas == true
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Test CSV after setting cells to plain double values AND formulas, with showForumlas == false
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: Set a cell to a double value. Cell is within current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Set a cell to a double value. Cell's Column & Row are beyond current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Set a cell to a formula value. Cell is within current bounds of sheet. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Set a cell to a formula value. Cell is BEYOND current bounds of sheet, and formula references a cell beyond the bounds. Get the value using each getValue(char,int) and getValue(String).
+TEST POINT VALUE: 10
+null
+java.lang.NullPointerException
+	at FormulaCell.getNumericValue(FormulaCell.java:64)
+	at CellSpreadSheet.getValue(CellSpreadSheet.java:216)
+	at Assignment7Tests.testSetAndGetFormulaValueBeyondBounds(Assignment7Tests.java:331)
+	at Assignment7Tests.runHW6Tests(Assignment7Tests.java:132)
+	at Assignment7Tests.main(Assignment7Tests.java:19)
+TEST NAME: CSV after calling set value beyond data bounds.
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: Expand Column Range.
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Column Through Row, Where Row < Actual Length.
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Column Through Row, Where Row > Actual Length.
+TEST POINT VALUE: 5
++++++TEST PASSED+++++
+
+TEST NAME: Get Copy Of Data
+TEST POINT VALUE: 20
++++++TEST PASSED+++++
+
+TEST NAME: CellSpreadSheetAPI - implements CellProvider?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: CellSpreadSheetAPI - correct return types for getCell?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: CellSpreadSheetAPI - correct return values for getCell?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: CellSpreadSheetAPI - correct return values evaluateFormula?
+TEST POINT VALUE: 10
+null
+java.lang.NullPointerException
+	at FormulaCell.getNumericValue(FormulaCell.java:64)
+	at CellSpreadSheet.evaluateFormula(CellSpreadSheet.java:248)
+	at Assignment7Tests.cellSpreadSheetEvaluateFormula(Assignment7Tests.java:798)
+	at Assignment7Tests.runHW7Tests(Assignment7Tests.java:657)
+	at Assignment7Tests.main(Assignment7Tests.java:20)
+TEST NAME: doubleCellAPI - implements Cell?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: formulaCellAPI - implements Cell?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: doubleCellReturnValues - implements Cell?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+TEST NAME: formulaCellValues - works with my CellProvider?
+TEST POINT VALUE: 10
++++++TEST PASSED+++++
+
+
